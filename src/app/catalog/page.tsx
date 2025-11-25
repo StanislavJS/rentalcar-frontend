@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useCarsStore } from '@/store/useCarsStore';
+import CarsGrid from '@/components/catalog/CarsGrid';
 
 export default function CatalogPage() {
   const { cars, fetchCars, isLoading, error } = useCarsStore();
@@ -17,13 +18,7 @@ export default function CatalogPage() {
       {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
 
-      <ul>
-        {cars.map((car) => (
-          <li key={car.id}>
-            {car.brand} — {car.model} — {car.rentalPrice}$
-          </li>
-        ))}
-      </ul>
+      <CarsGrid cars={cars} />
     </section>
   );
 }
