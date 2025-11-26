@@ -1,0 +1,101 @@
+.form {
+  width: 100%;
+  padding: 32px;
+  border: 1px solid #dadde1;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.subtitle {
+  color: #667085;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.input,
+.textarea,
+.dateInput input {
+  width: 100%;
+  background: #f7f7f7;
+  border-radius: 12px;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #101828;
+}
+
+.textarea {
+  height: 140px;
+  resize: none;
+}
+
+.dateWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+/* Button */
+.button {
+  width: 180px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: #0b44cd;
+}
+
+/* Wrapper */
+.dateInput {
+  width: 100%;
+}
+
+.dateInput .react-date-picker__wrapper {
+  background: #f7f7f7;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+}
+
+/* Calendar popup */
+.react-calendar {
+  border: 1px solid #dadde1 !important;
+  border-radius: 12px;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+.react-calendar__tile--active {
+  background: #3470ff !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+
+.react-calendar__tile:hover {
+  background: #e4e9ff !important;
+}
