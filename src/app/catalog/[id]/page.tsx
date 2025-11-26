@@ -1,12 +1,18 @@
-type CarPageProps = {
-  params: { id: string };
-};
+import { getCarById } from '@/services/carsApi';
+import CarDetails from '@/components/car/CarDetails';
 
-export default function CarPage({ params }: CarPageProps) {
+export default async function CarPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+
+  const car = await getCarById(id);
+
   return (
     <section className="container" style={{ padding: '48px 0' }}>
-      <h1>Car Details</h1>
-      <p>ID: {params.id}</p>
+      <CarDetails car={car} />
     </section>
   );
 }
